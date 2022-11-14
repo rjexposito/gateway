@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from "../services/users/users.service";
 
 
 @Component({
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   password: string;
 
 
-  constructor() {
+  constructor(public userService: UsersService) {
     this.email = '';
     this.password = '';
    }
@@ -20,8 +21,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.email);
-    console.log(this.password);
+    const user = {email: this.email, password: this.password};
+    this.userService.login(user).subscribe( data => {
+      console.log(data);
+    });
   }
 
 }

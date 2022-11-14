@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-register',
@@ -21,9 +22,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  register() {
-    console.log(this.email);
-    console.log(this.password);
+  login() {
+    const user = {email: this.email, password: this.password};
+    this.userService.login(user).subscribe( data => {
+      console.log(data);
+    });
   }
-
 }
