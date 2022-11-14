@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
 
 //Rutas
 import { APPROUTINGMODULE } from './app.routes';
@@ -29,7 +30,8 @@ import { RegisterComponent } from './components/authenication/register/register.
   ],
   imports: [
     BrowserModule,
-    APPROUTINGMODULE
+    APPROUTINGMODULE,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
