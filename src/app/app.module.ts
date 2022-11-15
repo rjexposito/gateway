@@ -31,10 +31,11 @@ import { RegisterComponent } from './components/authenication/register/register.
   imports: [
     BrowserModule,
     APPROUTINGMODULE,
-    FormsModule
+    FormsModule,
+    HttpClient
   ],
   providers: [
-    HttpClient
+
   ],
   bootstrap: [AppComponent]
 })

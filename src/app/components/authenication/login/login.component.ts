@@ -12,9 +12,10 @@ export class LoginComponent implements OnInit {
   password: string;
 
 
-  constructor(public userService: UsersService) {
-    this.email = '';
-    this.password = '';
+  constructor() {
+    // public userService: UsersService
+    // this.email = '';
+    // this.password = '';
    }
 
   ngOnInit(): void {
