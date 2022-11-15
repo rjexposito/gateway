@@ -7,7 +7,6 @@ import { UsersService } from "../../../services/users/users.service";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
   email: string;
   password: string;
   confirmPassword: string;
@@ -21,10 +20,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login() {
-    // const user = {email: this.email, password: this.password};
-    // this.userService.login(user).subscribe( data => {
-    //   console.log(data);
-    // });
+  register() {
+    const user = { email: this.email, password: this.password };
+    this.userService.register(user).subscribe(data => {
+      console.log(data);
+    });
   }
 }

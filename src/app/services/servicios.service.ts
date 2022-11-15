@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Gateway } from '../models/gateway.model';
 
 
-const baseUrl = 'http://localhost:5432/api/gateway';
+const baseUrl = 'http://localhost:8080/api/gateway';
 
 @Injectable({
   providedIn: 'root'

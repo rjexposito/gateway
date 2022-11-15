@@ -10,7 +10,11 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   login(user: any): Observable<any> {
-    //return this.http.post("https://reqres.in/api/login", user); //aqui tengo que utilizar la ApiRest
-    return this.http.post("http://localhost:5432/api/gateway", user);
+    //return this.http.post("https://reqres.in/api/login", user);
+    return this.http.post("http://localhost:8080/api/gateway", user);
+  }
+  register(user: any): Observable<any> {
+    // return this.http.post("http://localhost:8080/api/gateway", user);
+    return user;
   }
 }
