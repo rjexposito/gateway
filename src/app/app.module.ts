@@ -6,7 +6,7 @@ import { FormsModule } from "@angular/forms";
 import { APPROUTINGMODULE } from './app.routes';
 
 //Servicios
-
+import { HttpClient } from "@angular/common/http";
 
 
 //Componentes
@@ -33,7 +33,9 @@ import { RegisterComponent } from './components/authenication/register/register.
     APPROUTINGMODULE,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
