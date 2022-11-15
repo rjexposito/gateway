@@ -12,7 +12,7 @@ export class GatewaysComponent implements OnInit {
   id: '1',
   serial_number: '', // a unique serial number (string)
   human_readable: '',   //human-readable name (string)
-  ipv4_address: false,  // IPv4 address (to be validated)
+  ipv4_address: '',  // IPv4 address (to be validated)
                             //multiple associated peripheral devices
   published: false,
   };
@@ -36,7 +36,7 @@ export class GatewaysComponent implements OnInit {
     //     },
     //     error => {
     //       console.log(error);
-    //     }); 
+    //     });
   }
 
   newGateway(): void {

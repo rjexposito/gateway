@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs";
+import { UsersService } from "../../../services/users/users.service";
 
 @Component({
   selector: 'app-register',
@@ -12,20 +12,19 @@ export class RegisterComponent implements OnInit {
   password: string;
   confirmPassword: string;
 
-  constructor() { 
+  constructor(public userService: UsersService) {
     this.email = '';
     this.password = '';
     this.confirmPassword = '';
-
   }
 
   ngOnInit(): void {
   }
 
   login() {
-    const user = {email: this.email, password: this.password};
-    this.userService.login(user).subscribe( data => {
-      console.log(data);
-    });
+    // const user = {email: this.email, password: this.password};
+    // this.userService.login(user).subscribe( data => {
+    //   console.log(data);
+    // });
   }
 }

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Gateway } from '../models/gateway.model';
 
 
-const baseUrl = 'http://localhost:8080/api/tutorials';
+const baseUrl = 'http://localhost:5432/api/gateway';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,8 @@ export class ServiciosService {
 
   constructor(private http: HttpClient) { }
 
-  // getAll(): Observable<Tutorial[]> {
-  //   return this.http.get<Tutorial[]>(baseUrl);
+  // getAll(): Observable<Gateway[]> {
+  //   return this.http.get<Gateway[]>(baseUrl);
   // }
 
   // get(id: any): Observable<Tutorial> {
